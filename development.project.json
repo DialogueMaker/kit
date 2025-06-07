@@ -1,0 +1,11 @@
+{
+  "name": "DialogueMakerKit",
+  "tree": {
+    "$className": "DataModel",
+    "ReplicatedStorage": {
+      "DialogueMakerKit": {
+        "$path": "src"
+      }
+    }
+  }
+}

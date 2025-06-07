@@ -1,0 +1,52 @@
+name = "dialoguemaker/kit"
+version = "0.1.0"
+description = "A collection of tools and utilities for building dialogue systems in Roblox, including templates, triggers, and effects."
+authors = ["Christian Toney <christian.toney@beastslash.com>"]
+repository = "https://github.com/DialogueMaker/kit"
+license = "GPL-3.0"
+includes = [
+  "pesde.toml",
+  "README.md",
+  "LICENSE",
+  "src/**/*.lua",
+]
+private = true
+
+[target]
+environment = "roblox"
+lib = "src/init.client.lua"
+build_files = ["src"]
+
+[engines]
+pesde = "^0.7.0-rc.4"
+lune = "^0.8.9"
+
+[indices]
+default = "https://github.com/pesde-pkg/index"
+
+[wally_indices]
+default = "https://github.com/UpliftGames/wally-index"
+
+[scripts]
+roblox_sync_config_generator = ".pesde/scripts/roblox_sync_config_generator.luau"
+sourcemap_generator = ".pesde/scripts/sourcemap_generator.luau"
+
+[dev_dependencies]
+scripts = { name = "pesde/scripts_rojo", version = "^0.1.0", target = "lune" }
+rojo = { name = "pesde/rojo", version = "^7.4.4", target = "lune" }
+luau_lsp = { name = "pesde/luau_lsp", version = "^1.47.0", target = "lune" }
+
+[dependencies]
+react = { wally = "jsdotlua/react", version = "^17.2.1" }
+react-roblox = { wally = "jsdotlua/react-roblox", version = "^17.2.1" }
+standard_theme = { name = "dialoguemaker/standard_theme", version = "^0.1.2" }
+click_detector_trigger = { name = "dialoguemaker/click_detector_trigger", version = "^0.1.0" }
+prompt_region_trigger = { name = "dialoguemaker/prompt_region_trigger", version = "^0.1.0" }
+proximity_prompt_trigger = { name = "dialoguemaker/proximity_prompt_trigger", version = "^0.1.0" }
+speech_bubble_trigger = { name = "dialoguemaker/speech_bubble_trigger", version = "^0.1.0" }
+dialogue = { name = "dialoguemaker/dialogue", version = "^0.1.0" }
+pause_effect = { name = "dialoguemaker/pause_effect", version = "^0.1.0" }
+shaking_effect = { name = "dialoguemaker/shaking_effect", version = "^0.1.0" }
+client = { name = "dialoguemaker/client", version = "^0.1.1" }
+conversation = { name = "dialoguemaker/conversation", version = "^0.1.4" } # This isn't present in the client, but templates may reference it.
+dialogue_maker_types = { name = "dialoguemaker/types", version = "^0.1.7" }

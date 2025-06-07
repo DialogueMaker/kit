@@ -1,0 +1,9 @@
+{
+  "name": "DialogueMakerKit",
+  "tree": {
+    "$path": "src",
+    "Packages": {
+      "$path": "roblox_packages"
+    }
+  }
+}
