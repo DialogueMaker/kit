@@ -39,14 +39,10 @@ luau_lsp = { name = "pesde/luau_lsp", version = "^1.47.0", target = "lune" }
 [dependencies]
 react = { wally = "jsdotlua/react", version = "^17.2.1" }
 react-roblox = { wally = "jsdotlua/react-roblox", version = "^17.2.1" }
-standard_theme = { name = "dialoguemaker/standard_theme", version = "^0.1.2" }
-click_detector_trigger = { name = "dialoguemaker/click_detector_trigger", version = "^0.1.0" }
-prompt_region_trigger = { name = "dialoguemaker/prompt_region_trigger", version = "^0.1.0" }
-proximity_prompt_trigger = { name = "dialoguemaker/proximity_prompt_trigger", version = "^0.1.0" }
-speech_bubble_trigger = { name = "dialoguemaker/speech_bubble_trigger", version = "^0.1.0" }
-dialogue = { name = "dialoguemaker/dialogue", version = "^0.1.0" }
-pause_effect = { name = "dialoguemaker/pause_effect", version = "^0.1.0" }
-shaking_effect = { name = "dialoguemaker/shaking_effect", version = "^0.1.0" }
-client = { name = "dialoguemaker/client", version = "^0.1.1" }
-conversation = { name = "dialoguemaker/conversation", version = "^0.1.4" } # This isn't present in the client, but templates may reference it.
-dialogue_maker_types = { name = "dialoguemaker/types", version = "^0.1.7" }
+Dialogue = { name = "dialoguemaker/dialogue", version = "^0.1.8" }
+Client = { name = "dialoguemaker/client", version = "^0.1.5" }
+Conversation = { name = "dialoguemaker/conversation", version = "^0.1.7" }
+DialogueMakerTypes = { name = "dialoguemaker/types", version = "^0.1.23" }
+Message = { name = "dialoguemaker/message", version = "^0.1.3" }
+Response = { name = "dialoguemaker/response", version = "^0.1.3" }
+Redirect = { name = "dialoguemaker/redirect", version = "^0.1.3" }

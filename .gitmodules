@@ -1,0 +1,21 @@
+[submodule "src/Effects/PauseEffect"]
+	path = src/Effects/PauseEffect
+	url = https://github.com/DialogueMaker/pause_effect
+[submodule "src/Effects/ShakingEffect"]
+	path = src/Effects/ShakingEffect
+	url = https://github.com/DialogueMaker/shaking_effect
+[submodule "src/Themes/StandardTheme"]
+	path = src/Themes/StandardTheme
+	url = https://github.com/DialogueMaker/standard_theme
+[submodule "src/Triggers/ClickDetectorTrigger"]
+	path = src/Triggers/ClickDetectorTrigger
+	url = https://github.com/DialogueMaker/click_detector_trigger
+[submodule "src/Triggers/ProximityPromptTrigger"]
+	path = src/Triggers/ProximityPromptTrigger
+	url = https://github.com/DialogueMaker/proximity_prompt_trigger
+[submodule "src/Triggers/SpeechBubbleTrigger"]
+	path = src/Triggers/SpeechBubbleTrigger
+	url = https://github.com/DialogueMaker/speech_bubble_trigger
+[submodule "src/Triggers/PromptRegionTrigger"]
+	path = src/Triggers/PromptRegionTrigger
+	url = https://github.com/DialogueMaker/prompt_region_trigger

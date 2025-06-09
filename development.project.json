@@ -4,7 +4,10 @@
     "$className": "DataModel",
     "ReplicatedStorage": {
       "DialogueMakerKit": {
-        "$path": "src"
+        "$path": "src",
+        "Packages": {
+          "$path": "roblox_packages"
+        }
       }
     }
   }

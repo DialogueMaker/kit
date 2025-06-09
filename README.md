@@ -15,4 +15,4 @@ Because you're all done.
 You can use the [Dialogue Maker plugin](https://github.com/DialogueMaker/plugin) to update the Packages folder when you need to. You can also add the latest copy of the kit to your game using Roblox Studio's Toolbox.
 
 ## Examples
-### Hello world
+See the [Examples](./src/Examples) folder for some examples on how to use the kit.
