@@ -23,7 +23,9 @@ local nextConversation = Conversation.new({}, {
         name = "Random Guy";
       };
     };
-    runCleanupAction = function()
+    runCleanupAction = function(self, client)
+
+      self:runDefaultCleanupAction(client);
 
       local screenGui = Instance.new("ScreenGui");
       screenGui.DisplayOrder = 1;

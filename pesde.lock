@@ -191,10 +191,10 @@ react-roblox = [{ wally = "wally#jsdotlua/react-roblox", version = "^17.2.1", in
 rojo = [{ name = "pesde/rojo", version = "^7.4.4", index = "https://github.com/pesde-pkg/index", target = "lune" }, "dev"]
 scripts = [{ name = "pesde/scripts_rojo", version = "^0.1.0", index = "https://github.com/pesde-pkg/index", target = "lune" }, "dev"]
 
-[graph."dialoguemaker/standard_theme@0.1.4 roblox"]
-direct = ["StandardTheme", { name = "dialoguemaker/standard_theme", version = "^0.1.4", index = "default" }, "standard"]
+[graph."dialoguemaker/standard_theme@0.1.5 roblox"]
+direct = ["StandardTheme", { name = "dialoguemaker/standard_theme", version = "^0.1.5", index = "default" }, "standard"]
 
-[graph."dialoguemaker/standard_theme@0.1.4 roblox".dependencies]
+[graph."dialoguemaker/standard_theme@0.1.5 roblox".dependencies]
 dialogue_content_fitter = ["dialoguemaker/dialogue_content_fitter@0.1.0 roblox", "standard"]
 DialogueMakerTypes = ["dialoguemaker/types@0.1.25 roblox", "standard"]
 react = ["wally#jsdotlua/react@17.2.1 roblox", "peer"]
@@ -204,11 +204,11 @@ use_responses = ["dialoguemaker/use_responses@0.1.2 roblox", "standard"]
 use_typewriter = ["dialoguemaker/use_typewriter@0.1.0 roblox", "standard"]
 useKeybindContinue = ["dialoguemaker/use_keybind_continue@0.1.4 roblox", "standard"]
 
-[graph."dialoguemaker/standard_theme@0.1.4 roblox".pkg_ref]
+[graph."dialoguemaker/standard_theme@0.1.5 roblox".pkg_ref]
 ref_ty = "pesde"
 index_url = "https://github.com/pesde-pkg/index"
 
-[graph."dialoguemaker/standard_theme@0.1.4 roblox".pkg_ref.dependencies]
+[graph."dialoguemaker/standard_theme@0.1.5 roblox".pkg_ref.dependencies]
 dialogue_content_fitter = [{ name = "dialoguemaker/dialogue_content_fitter", version = "^0.1.0", index = "https://github.com/pesde-pkg/index" }, "standard"]
 DialogueMakerTypes = [{ name = "dialoguemaker/types", version = "^0.1.25", index = "https://github.com/pesde-pkg/index" }, "standard"]
 luau_lsp = [{ name = "pesde/luau_lsp", version = "^1.48.0", index = "https://github.com/pesde-pkg/index", target = "lune" }, "dev"]
