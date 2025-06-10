@@ -1,28 +1,26 @@
 --!strict
 
+local Players = game:GetService("Players");
+local RunService = game:GetService("RunService");
+
 local dialogueMakerKit = script.Parent.Parent; -- Replace with your own path to the DialogueMakerKit folder.
 local Client = require(dialogueMakerKit.Packages.Client);
 local Conversation = require(dialogueMakerKit.Packages.Conversation);
 local Message = require(dialogueMakerKit.Packages.Message);
-local Response = require(dialogueMakerKit.Packages.Response);
-local Redirect = require(dialogueMakerKit.Packages.Redirect);
 
 local StandardTheme = require(dialogueMakerKit.Packages.StandardTheme);
 
 -- Create a new conversation.
+local player = Players.LocalPlayer;
 local conversation = Conversation.new({}, {
-  [1] = Message.new("Hello, world!", {}, {
-    [1] = Response.new("Hello, world!", {}, {
-      [1] = Redirect.new({}, function(self)
+  [1] = Message.new(`Hey, {player.Name}. Did you save today?`, {
+    verifyCondition = function()
 
-        return {self:getConversation():getNextVerifiedDialogue()}
-
-      end);
-    });
-    [2] = Response.new("Goodbye, world!", {}, {
-      [1] = Message.new("H-huh!? You weren't supposed to do that! You gotta get outta here before they find out!");
-    })
+      return RunService:IsStudio();
+      
+    end
   });
+  [2] = Message.new(`Hey, {player.Name}. Remember to like and subscribe.`);
 });
 
 -- Start the conversation.
