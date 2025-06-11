@@ -34,3 +34,5 @@ Client.new({
     };
   };
 });
+
+return {};

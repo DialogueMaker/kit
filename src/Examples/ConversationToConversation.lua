@@ -15,7 +15,8 @@ local StandardTheme = require(dialogueMakerKit.Packages.StandardTheme);
 
 type Page = DialogueMakerTypes.Page;
 
--- Create a new conversation.
+local timeoutTask: thread? = nil;
+
 local nextConversation = Conversation.new({}, {
   [1] = Message.new("Let's battle!!", {
     settings = {
@@ -23,7 +24,28 @@ local nextConversation = Conversation.new({}, {
         name = "Random Guy";
       };
     };
+    runCompletionAction = function(self, client)
+
+      timeoutTask = task.delay(3, function()
+        
+        self:runCleanupAction(client);
+
+      end);
+
+    end;
     runCleanupAction = function(self, client)
+
+      if timeoutTask then
+
+        if coroutine.status(timeoutTask) == "suspended" then
+
+          task.cancel(timeoutTask);
+
+        end
+
+        timeoutTask = nil;
+
+      end
 
       self:runDefaultCleanupAction(client);
 
@@ -33,20 +55,15 @@ local nextConversation = Conversation.new({}, {
       screenGui.Parent = Players.LocalPlayer:WaitForChild("PlayerGui");
 
       local sound = Instance.new("Sound");
-      sound.SoundId = "rbxassetid://101554078158425";
+      sound.SoundId = "rbxassetid://6573255933";
       sound.Parent = screenGui;
       sound:Play();
 
       local blurEffect = Instance.new("BlurEffect");
-      blurEffect.Size = 0;
+      blurEffect.Size = 24;
       blurEffect.Parent = Lighting;
 
-      local tween = TweenService:Create(blurEffect, TweenInfo.new(1.5), {
-        Size = 24
-      });
-      
-      tween:Play();
-      tween.Completed:Wait();
+      task.wait(1);
 
       local textLabel = Instance.new("TextLabel");
       textLabel.AnchorPoint = Vector2.new(0.5, 0.5);
@@ -54,6 +71,7 @@ local nextConversation = Conversation.new({}, {
       textLabel.TextColor3 = Color3.new(1, 1, 1);
       textLabel.FontFace = Font.fromName("BuilderSans");
       textLabel.Text = "you lost the game.";
+      textLabel.TextSize = 36;
       textLabel.TextTransparency = 1;
       textLabel.Parent = screenGui;
 
@@ -99,3 +117,5 @@ Client.new({
     };
   };
 });
+
+return {};
