@@ -1,5 +1,5 @@
 # Dialogue Maker Kit
-The Dialogue Maker Kit is intended for developers who use Roblox Studio over external tools and package managers. It includes a collection of common Dialogue Maker packages, and includes a few folders for you to organize your Dialogue Maker themes, effects, and triggers.
+The Dialogue Maker Kit is intended for developers who use Roblox Studio over external tools and package managers. It includes a collection of common Dialogue Maker packages, and includes a few folders for you to organize your Dialogue Maker themes, examples, and other common packages.
 
 ## Installation
 ### Get it from the Roblox Creator Store
