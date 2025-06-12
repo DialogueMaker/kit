@@ -23,9 +23,7 @@ jobs:
         uses: actions/checkout@v4.1.7
 
       - name: Setup pesde
-        uses: lumin-org/setup-pesde@v0.4.1
-        with:
-          cache: true
+        uses: ernisto/setup-pesde@5f9a3399d5ae0fe78b014f5f13cd913f27755fb4
 
       - name: Install dependencies
         run: pesde install
