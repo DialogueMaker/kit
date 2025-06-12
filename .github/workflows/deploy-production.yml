@@ -55,7 +55,9 @@ jobs:
         run: | 
           curl \
           --fail-with-body \
-          -H "x-api-key: $ROBLOX_API_KEY" \
-          -H "Content-Type: application/xml" \
-          --data-binary @build.rbxm \
-          "https://apis.roblox.com/assets/v1/""$ROBLOX_ASSET_ID"""
+          --request PATCH \
+          "https://apis.roblox.com/assets/v1/{assetId}" \
+          --header "x-api-key: $ROBLOX_API_KEY" \
+          --form 'request="{\"assetId\": $ROBLOX_ASSET_ID}"'
+          --form 'fileContent="@build.rbxm"'
+          
