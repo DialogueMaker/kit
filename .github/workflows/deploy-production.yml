@@ -1,0 +1,60 @@
+name: Publish to production environment
+
+on:
+  push: 
+    branches: [production]
+    paths:
+      - "src/**"
+      - "pesde.toml"
+      - "default.project.json"
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: Build
+    environment: Production
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4.1.7
+
+      - name: Install dependencies
+        uses: lumin-org/setup-pesde@v0.4.1
+        with:
+          version: v0.7.0-rc.4
+
+      - name: Build Rojo project
+        run: rojo build -o build.rbxm
+
+      - name: Upload project
+        uses: actions/upload-artifact@v4.4.0
+        with:
+          name: build.rbxm
+          path: build.rbxm
+        
+  deploy:
+    name: Deploy
+    environment: Production
+    runs-on: ubuntu-24.04
+    needs: build
+    steps:
+      - name: Download project
+        uses: actions/download-artifact@v4.1.8
+        with:
+          name: build.rbxm
+
+      - name: Update Roblox asset
+        env:
+          ROBLOX_API_KEY: ${{ secrets.ROBLOX_API_KEY }}
+          ROBLOX_ASSET_ID: ${{ vars.ROBLOX_ASSET_ID }}
+        run: | 
+          curl \
+          --fail-with-body \
+          -H "x-api-key: $ROBLOX_API_KEY" \
+          -H "Content-Type: application/xml" \
+          --data-binary @build.rbxm \
+          "https://apis.roblox.com/assets/v1/""$ROBLOX_ASSET_ID"""
