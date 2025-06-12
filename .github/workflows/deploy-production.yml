@@ -24,6 +24,8 @@ jobs:
 
       - name: Setup pesde
         uses: ernisto/setup-pesde@5f9a3399d5ae0fe78b014f5f13cd913f27755fb4
+        with:
+          cache: true
 
       - name: Install dependencies
         run: pesde install
