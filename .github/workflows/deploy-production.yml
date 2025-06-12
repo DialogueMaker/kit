@@ -24,6 +24,8 @@ jobs:
 
       - name: Setup pesde
         uses: lumin-org/setup-pesde@v0.4.1
+        with:
+          cache: true
 
       - name: Install dependencies
         run: pesde install
