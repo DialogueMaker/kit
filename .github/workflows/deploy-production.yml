@@ -22,8 +22,11 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4.1.7
 
-      - name: Install dependencies
+      - name: Setup pesde
         uses: lumin-org/setup-pesde@v0.4.1
+
+      - name: Install dependencies
+        run: pesde install
 
       - name: Build Rojo project
         run: rojo build -o build.rbxm
