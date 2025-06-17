@@ -39,19 +39,19 @@ react-roblox = [{ wally = "wally#jsdotlua/react-roblox", version = "^17.2.1", in
 rojo = [{ name = "pesde/rojo", version = "^7.4.4", index = "https://github.com/pesde-pkg/index", target = "lune" }, "dev"]
 scripts = [{ name = "pesde/scripts_rojo", version = "^0.1.0", index = "https://github.com/pesde-pkg/index", target = "lune" }, "dev"]
 
-[graph."dialoguemaker/conversation@0.1.9 roblox"]
-direct = ["Conversation", { name = "dialoguemaker/conversation", version = "^0.1.9", index = "default" }, "standard"]
+[graph."dialoguemaker/conversation@0.1.10 roblox"]
+direct = ["Conversation", { name = "dialoguemaker/conversation", version = "^0.1.10", index = "default" }, "standard"]
 
-[graph."dialoguemaker/conversation@0.1.9 roblox".dependencies]
-DialogueMakerTypes = ["dialoguemaker/types@0.1.25 roblox", "standard"]
+[graph."dialoguemaker/conversation@0.1.10 roblox".dependencies]
+DialogueMakerTypes = ["dialoguemaker/types@0.1.27 roblox", "standard"]
 react = ["wally#jsdotlua/react@17.2.1 roblox", "peer"]
 
-[graph."dialoguemaker/conversation@0.1.9 roblox".pkg_ref]
+[graph."dialoguemaker/conversation@0.1.10 roblox".pkg_ref]
 ref_ty = "pesde"
 index_url = "https://github.com/pesde-pkg/index"
 
-[graph."dialoguemaker/conversation@0.1.9 roblox".pkg_ref.dependencies]
-DialogueMakerTypes = [{ name = "dialoguemaker/types", version = "^0.1.25", index = "https://github.com/pesde-pkg/index" }, "standard"]
+[graph."dialoguemaker/conversation@0.1.10 roblox".pkg_ref.dependencies]
+DialogueMakerTypes = [{ name = "dialoguemaker/types", version = "^0.1.27", index = "https://github.com/pesde-pkg/index" }, "standard"]
 luau_lsp = [{ name = "pesde/luau_lsp", version = "^1.47.0", index = "https://github.com/pesde-pkg/index", target = "lune" }, "dev"]
 react = [{ wally = "wally#jsdotlua/react", version = "^17.2.1", index = "https://github.com/UpliftGames/wally-index" }, "peer"]
 rojo = [{ name = "pesde/rojo", version = "^7.4.4", index = "https://github.com/pesde-pkg/index", target = "lune" }, "dev"]
@@ -251,9 +251,6 @@ react-roblox = [{ wally = "wally#jsdotlua/react-roblox", version = "^17.2.1", in
 rojo = [{ name = "pesde/rojo", version = "^7.4.4", index = "https://github.com/pesde-pkg/index", target = "lune" }, "dev"]
 scripts = [{ name = "pesde/scripts_rojo", version = "^0.1.0", index = "https://github.com/pesde-pkg/index", target = "lune" }, "dev"]
 
-[graph."dialoguemaker/types@0.1.25 roblox"]
-direct = ["DialogueMakerTypes", { name = "dialoguemaker/types", version = "^0.1.25", index = "default" }, "standard"]
-
 [graph."dialoguemaker/types@0.1.25 roblox".dependencies]
 react = ["wally#jsdotlua/react@17.2.1 roblox", "standard"]
 react-roblox = ["wally#jsdotlua/react-roblox@17.2.1 roblox", "standard"]
@@ -263,6 +260,24 @@ ref_ty = "pesde"
 index_url = "https://github.com/pesde-pkg/index"
 
 [graph."dialoguemaker/types@0.1.25 roblox".pkg_ref.dependencies]
+luau_lsp = [{ name = "pesde/luau_lsp", version = "^1.47.0", index = "https://github.com/pesde-pkg/index", target = "lune" }, "dev"]
+react = [{ wally = "wally#jsdotlua/react", version = "^17.2.1", index = "https://github.com/UpliftGames/wally-index" }, "standard"]
+react-roblox = [{ wally = "wally#jsdotlua/react-roblox", version = "^17.2.1", index = "https://github.com/UpliftGames/wally-index" }, "standard"]
+rojo = [{ name = "pesde/rojo", version = "^7.4.4", index = "https://github.com/pesde-pkg/index", target = "lune" }, "dev"]
+scripts = [{ name = "pesde/scripts_rojo", version = "^0.1.0", index = "https://github.com/pesde-pkg/index", target = "lune" }, "dev"]
+
+[graph."dialoguemaker/types@0.1.27 roblox"]
+direct = ["DialogueMakerTypes", { name = "dialoguemaker/types", version = "^0.1.27", index = "default" }, "standard"]
+
+[graph."dialoguemaker/types@0.1.27 roblox".dependencies]
+react = ["wally#jsdotlua/react@17.2.1 roblox", "standard"]
+react-roblox = ["wally#jsdotlua/react-roblox@17.2.1 roblox", "standard"]
+
+[graph."dialoguemaker/types@0.1.27 roblox".pkg_ref]
+ref_ty = "pesde"
+index_url = "https://github.com/pesde-pkg/index"
+
+[graph."dialoguemaker/types@0.1.27 roblox".pkg_ref.dependencies]
 luau_lsp = [{ name = "pesde/luau_lsp", version = "^1.47.0", index = "https://github.com/pesde-pkg/index", target = "lune" }, "dev"]
 react = [{ wally = "wally#jsdotlua/react", version = "^17.2.1", index = "https://github.com/UpliftGames/wally-index" }, "standard"]
 react-roblox = [{ wally = "wally#jsdotlua/react-roblox", version = "^17.2.1", index = "https://github.com/UpliftGames/wally-index" }, "standard"]
