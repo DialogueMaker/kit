@@ -17,7 +17,7 @@ local function generateDynamicMessageContent()
   for wordIndex = 1, wordCount do
 
     local selectedWord = words[Random.new():NextInteger(1, #words)];
-    content = content .. (if content ~= "" then " " else "") .. selectedWord;
+    content = `{content}{if content ~= "" then " " else ""}{selectedWord}`;
   
   end
 

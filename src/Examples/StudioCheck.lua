@@ -13,6 +13,8 @@ local StandardTheme = require(dialogueMakerKit.Packages.StandardTheme);
 -- Create a new conversation.
 local player = Players.LocalPlayer;
 local conversation = Conversation.new({}, {
+
+  -- This message will only be shown if the player is in Studio.
   [1] = Message.new(`Hey, {player.Name}. Did you save today?`, {
     verifyCondition = function()
 
@@ -20,6 +22,8 @@ local conversation = Conversation.new({}, {
       
     end
   });
+
+  -- This message will only be shown if the player is not in Studio.
   [2] = Message.new(`Hey, {player.Name}. Remember to like and subscribe.`);
 });
 
