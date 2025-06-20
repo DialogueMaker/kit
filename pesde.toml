@@ -39,13 +39,13 @@ luau_lsp = { name = "pesde/luau_lsp", version = "^1.47.0", target = "lune" }
 [dependencies]
 react = { wally = "jsdotlua/react", version = "^17.2.1" }
 react-roblox = { wally = "jsdotlua/react-roblox", version = "^17.2.1" }
-Dialogue = { name = "dialoguemaker/dialogue", version = "^0.1.11" }
-Client = { name = "dialoguemaker/client", version = "^0.1.8" }
-Conversation = { name = "dialoguemaker/conversation", version = "^0.1.11" }
-DialogueMakerTypes = { name = "dialoguemaker/types", version = "^0.1.30" }
-Message = { name = "dialoguemaker/message", version = "^0.1.7" }
-Response = { name = "dialoguemaker/response", version = "^0.1.6" }
-Redirect = { name = "dialoguemaker/redirect", version = "^0.1.7" }
-StandardTheme = { name = "dialoguemaker/standard_theme", version = "^0.1.7" }
-PauseEffect = { name = "dialoguemaker/pause_effect", version = "^0.1.1" }
-Effect = { name = "dialoguemaker/effect", version = "^0.1.1" }
+Dialogue = { name = "dialoguemaker/dialogue", version = "^0.1.12" }
+Client = { name = "dialoguemaker/client", version = "^0.1.9" }
+Conversation = { name = "dialoguemaker/conversation", version = "^0.1.12" }
+DialogueMakerTypes = { name = "dialoguemaker/types", version = "^0.1.31" }
+Message = { name = "dialoguemaker/message", version = "^0.1.8" }
+Response = { name = "dialoguemaker/response", version = "^0.1.7" }
+Redirect = { name = "dialoguemaker/redirect", version = "^0.1.8" }
+StandardTheme = { name = "dialoguemaker/standard_theme", version = "^0.1.8" }
+PauseEffect = { name = "dialoguemaker/pause_effect", version = "^0.1.2" }
+Effect = { name = "dialoguemaker/effect", version = "^0.1.2" }
