@@ -1,24 +1,24 @@
 name = "dialoguemaker/kit"
-version = "0.1.0"
+version = "1.0.0-rc.1"
 description = "A collection of tools and utilities for building dialogue systems in Roblox, including examples, themes, effects, and other packages."
 authors = ["Christian Toney <christian.toney@beastslash.com>"]
 repository = "https://github.com/DialogueMaker/kit"
-license = "GPL-3.0"
+license = "MPL-2.0"
 includes = [
   "pesde.toml",
   "README.md",
   "LICENSE",
-  "src/**/*.lua",
+  "src/**/*.luau",
 ]
 private = true
 
 [target]
 environment = "roblox"
-lib = "src/init.client.lua"
+lib = "src/init.client.luau"
 build_files = ["src"]
 
 [engines]
-pesde = "^0.7.0-rc.4"
+pesde = "^0.7.0-rc.6"
 lune = "^0.8.9"
 
 [indices]
@@ -46,6 +46,6 @@ DialogueMakerTypes = { name = "dialoguemaker/types", version = "^0.1.31" }
 Message = { name = "dialoguemaker/message", version = "^0.1.8" }
 Response = { name = "dialoguemaker/response", version = "^0.1.7" }
 Redirect = { name = "dialoguemaker/redirect", version = "^0.1.8" }
-StandardTheme = { name = "dialoguemaker/standard_theme", version = "^0.1.8" }
+StandardTheme = { name = "dialoguemaker/standard_theme", version = "^0.1.10" }
 PauseEffect = { name = "dialoguemaker/pause_effect", version = "^0.1.2" }
 Effect = { name = "dialoguemaker/effect", version = "^0.1.2" }
