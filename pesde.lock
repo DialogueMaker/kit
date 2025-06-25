@@ -177,6 +177,28 @@ react-roblox = [{ wally = "wally#jsdotlua/react-roblox", version = "^17.2.1", in
 rojo = [{ name = "pesde/rojo", version = "^7.4.4", index = "https://github.com/pesde-pkg/index", target = "lune" }, "dev"]
 scripts = [{ name = "pesde/scripts_rojo", version = "^0.1.0", index = "https://github.com/pesde-pkg/index", target = "lune" }, "dev"]
 
+[graph."dialoguemaker/shaking_effect@0.1.1 roblox"]
+direct = ["ShakingEffect", { name = "dialoguemaker/shaking_effect", version = "^0.1.1", index = "default" }, "standard"]
+
+[graph."dialoguemaker/shaking_effect@0.1.1 roblox".dependencies]
+DialogueMakerTypes = ["dialoguemaker/types@0.1.31 roblox", "standard"]
+Effect = ["dialoguemaker/effect@0.1.2 roblox", "standard"]
+react = ["wally#jsdotlua/react@17.2.1 roblox", "peer"]
+useIterativeContent = ["dialoguemaker/use_iterative_content@0.1.1 roblox", "standard"]
+
+[graph."dialoguemaker/shaking_effect@0.1.1 roblox".pkg_ref]
+ref_ty = "pesde"
+index_url = "https://github.com/pesde-pkg/index"
+
+[graph."dialoguemaker/shaking_effect@0.1.1 roblox".pkg_ref.dependencies]
+DialogueMakerTypes = [{ name = "dialoguemaker/types", version = "^0.1.31", index = "https://github.com/pesde-pkg/index" }, "standard"]
+Effect = [{ name = "dialoguemaker/effect", version = "^0.1.2", index = "https://github.com/pesde-pkg/index" }, "standard"]
+luau_lsp = [{ name = "pesde/luau_lsp", version = "^1.47.0", index = "https://github.com/pesde-pkg/index", target = "lune" }, "dev"]
+react = [{ wally = "wally#jsdotlua/react", version = "^17.2.1", index = "https://github.com/UpliftGames/wally-index" }, "peer"]
+rojo = [{ name = "pesde/rojo", version = "^7.4.4", index = "https://github.com/pesde-pkg/index", target = "lune" }, "dev"]
+scripts = [{ name = "pesde/scripts_rojo", version = "^0.1.0", index = "https://github.com/pesde-pkg/index", target = "lune" }, "dev"]
+useIterativeContent = [{ name = "dialoguemaker/use_iterative_content", version = "^0.1.1", index = "https://github.com/pesde-pkg/index" }, "standard"]
+
 [graph."dialoguemaker/standard_theme@0.1.10 roblox"]
 direct = ["StandardTheme", { name = "dialoguemaker/standard_theme", version = "^0.1.10", index = "default" }, "standard"]
 

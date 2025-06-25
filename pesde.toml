@@ -49,3 +49,4 @@ Redirect = { name = "dialoguemaker/redirect", version = "^0.1.8" }
 StandardTheme = { name = "dialoguemaker/standard_theme", version = "^0.1.10" }
 PauseEffect = { name = "dialoguemaker/pause_effect", version = "^0.1.2" }
 Effect = { name = "dialoguemaker/effect", version = "^0.1.2" }
+ShakingEffect = { name = "dialoguemaker/shaking_effect", version = "^0.1.1" }
